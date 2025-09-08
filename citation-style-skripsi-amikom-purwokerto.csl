@@ -176,10 +176,10 @@
       <if type="book graphic manuscript motion_picture report song speech thesis" match="any">
         <choose>
           <if variable="version" type="book" match="all">
-            <text variable="title"/>
+            <text variable="title" text-case="title"/>
           </if>
           <else>
-            <text variable="title" font-style="italic"/>
+            <text variable="title" font-style="italic" text-case="title"/>
           </else>
         </choose>
       </if>
@@ -187,7 +187,7 @@
         <choose>
           <if variable="reviewed-title">
             <group delimiter=" ">
-              <text variable="title"/>
+              <text variable="title" text-case="title"/>
               <group delimiter=", " prefix="[" suffix="]">
                 <text variable="reviewed-title" font-style="italic" prefix="Review of "/>
                 <names variable="reviewed-author" delimiter=", ">
@@ -199,7 +199,7 @@
           </if>
           <else>
             <group delimiter=", " prefix="[" suffix="]">
-              <text variable="title" font-style="italic" prefix="Review of "/>
+              <text variable="title" font-style="italic" prefix="Review of " text-case="title"/>
               <names variable="reviewed-author" delimiter=", ">
                 <label form="verb-short" suffix=" "/>
                 <name and="symbol" initialize-with=". " delimiter=", "/>
@@ -209,7 +209,7 @@
         </choose>
       </else-if>
       <else>
-        <text variable="title"/>
+  <text variable="title" text-case="title"/>
       </else>
     </choose>
   </macro>
