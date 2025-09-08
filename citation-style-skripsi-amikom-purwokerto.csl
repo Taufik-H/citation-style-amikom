@@ -59,7 +59,7 @@
     </choose>
   </macro>
   <macro name="author">
-    <names variable="author">
+    <names variable="author" et-al-min="3" et-al-use-first="1" delimiter=", " and="text">
       <name name-as-sort-order="all" and="text" sort-separator=", " initialize-with=". " delimiter=", " delimiter-precedes-last="always"/>
       <label form="short" prefix=" (" suffix=")" text-case="capitalize-first"/>
       <substitute>
@@ -78,8 +78,7 @@
     </names>
   </macro>
   <macro name="author-short">
-    <names variable="author" et-al-min="3" et-al-use-first="1" delimiter="dan" and="text">
-      <name form="short" initialize-with=". " name-as-sort-order="all"/>
+  <names variable="author" form="short" and="symbol" et-al-min="3" et-al-use-first="1" et-al-subsequent-min="3" et-al-subsequent-use-first="1" initialize-with=". " name-as-sort-order="all"/>
       <substitute>
         <names variable="editor"/>
         <names variable="translator"/>
