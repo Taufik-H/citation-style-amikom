@@ -601,9 +601,9 @@
     <layout>
       <choose>
         <!-- ===================== -->
-        <!--  JURNAL / ARTIKEL & GENERIC (tanpa DOI/URL) -->
+        <!--  JURNAL / ARTIKEL (tanpa DOI/URL) -->
         <!-- ===================== -->
-        <if type="article-journal generic" match="any">
+        <if type="article-journal">
           <group suffix=".">
             <group delimiter=". ">
               <text macro="author"/>
@@ -614,6 +614,20 @@
             <text macro="locators"/>
           </group>
         </if>
+        <!-- ===================== -->
+        <!--  GENERIC (tanpa DOI/URL) -->
+        <!-- ===================== -->
+        <else-if type="generic">
+          <group suffix=".">
+            <group delimiter=". ">
+              <text macro="author"/>
+              <text macro="issued"/>
+              <text macro="title-plus-extra"/>
+              <text macro="container"/>
+            </group>
+            <text macro="locators"/>
+          </group>
+        </else-if>
         <!-- ===================== -->
         <!--  PROSIDING / CONFERENCE PAPER  -->
         <!-- ===================== -->
