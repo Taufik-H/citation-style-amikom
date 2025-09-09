@@ -601,9 +601,9 @@
     <layout>
       <choose>
         <!-- ===================== -->
-        <!--  JURNAL / ARTIKEL    -->
+        <!--  JURNAL / ARTIKEL & GENERIC (tanpa DOI/URL) -->
         <!-- ===================== -->
-        <if type="article-journal">
+        <if type="article-journal generic" match="any">
           <group suffix=".">
             <group delimiter=". ">
               <text macro="author"/>
