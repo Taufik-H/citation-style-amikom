@@ -140,24 +140,23 @@
       </if>
       <else>
         <choose>
-          <if variable="DOI">
-            <text variable="DOI" prefix="https://doi.org/"/>
+          <if type="post post-weblog webpage" match="any">
+            <group delimiter=", ">
+              <group delimiter=" ">
+                <text value="Diambil dari link"/>
+                <text variable="URL"/>
+              </group>
+              <group delimiter=" ">
+                <text value="diakses pada"/>
+                <date variable="accessed" form="text"/>
+              </group>
+            </group>
           </if>
           <else>
             <choose>
-             <if type="post post-weblog webpage" match="any">
-              <group delimiter=", ">
-                <group delimiter=" ">
-                  <text value="Diambil dari link"/>
-                  <text variable="URL"/>
-                </group>
-                <group delimiter=" ">
-                  <text value="diakses pada"/>
-                  <date variable="accessed" form="text"/>
-                </group>
-              </group>
-            </if>
-
+              <if variable="DOI">
+                <text variable="DOI" prefix="https://doi.org/"/>
+              </if>
               <else>
                 <group>
                   <text term="retrieved" text-case="capitalize-first" suffix=" "/>
@@ -209,7 +208,7 @@
         </choose>
       </else-if>
       <else>
-  <text variable="title" text-case="title"/>
+        <text variable="title" text-case="title"/>
       </else>
     </choose>
   </macro>
@@ -263,12 +262,12 @@
       <if type="report" match="any">
         <group delimiter=": ">
           <text variable="publisher-place"/>
-          <text variable="publisher"/>
+          <text variable="publisher" text-case="title"/>
         </group>
       </if>
       <else-if type="thesis" match="any">
         <group delimiter=", ">
-          <text variable="publisher"/>
+          <text variable="publisher" text-case="title"/>
           <text variable="publisher-place"/>
         </group>
       </else-if>
@@ -290,7 +289,7 @@
                     <text variable="event-place"/>
                   </else>
                 </choose>
-                <text variable="publisher"/>
+                <text variable="publisher" text-case="title"/>
               </group>
             </if>
           </choose>
