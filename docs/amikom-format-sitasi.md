@@ -12,21 +12,23 @@ Berikut detail aturan format sitasi dan daftar pustaka sesuai pedoman skripsi Un
 
 ## Format Daftar Pustaka
 
-### Jurnal
+#### Jurnal
 
-> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. Judul Penelitian. _Nama Jurnal_, 12(2): 123-134.
+> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. Judul Artikel Jurnal. _Nama Jurnal italic_, 12(2), 123-134.
 
-### Buku
+#### Buku
 
-> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. _Judul Buku_. Kota: Penerbit.
+> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. _Judul Buku italic_. Kota Terbit: Penerbit.
 
-### Website
+#### Website
 
-> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. _Judul Halaman Website_. Diakses dari https://example.com
+_jika tidak ada nama pengarang maka tulis nama websitenya saja_
 
-### Prosiding
+> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. _Judul Halaman Website italic_. Diakses dari https://example.com, diakses pada 10 September 2025.
 
-> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. "Judul Makalah." _Nama Prosiding_. Dipresentasikan di Seminar Nasional Informatika, Yogyakarta.
+#### Prosiding
+
+> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. Judul Makalah. _Nama Prosiding italic_. Dipresentasikan di Seminar Nasional Informatika, Yogyakarta.
 
 ---
 
