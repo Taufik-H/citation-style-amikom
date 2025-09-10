@@ -86,29 +86,29 @@
         <choose>
           <if type="report">
             <text variable="publisher"/>
-            <text variable="title" form="short" font-style="italic"/>
+            <text variable="title" form="short" font-style="italic" text-case="title"/>
           </if>
           <else-if type="legal_case">
-            <text variable="title" font-style="italic"/>
+            <text variable="title" font-style="italic" text-case="title"/>
           </else-if>
           <else-if type="book graphic  motion_picture song" match="any">
-            <text variable="title" form="short" font-style="italic"/>
+            <text variable="title" form="short" font-style="italic" text-case="title"/>
           </else-if>
           <else-if type="bill legislation" match="any">
-            <text variable="title" form="short"/>
+            <text variable="title" form="short" text-case="title"/>
           </else-if>
           <else-if variable="reviewed-author">
             <choose>
               <if variable="reviewed-title" match="none">
-                <text variable="title" form="short" font-style="italic" prefix="Review of "/>
+                <text variable="title" form="short" font-style="italic" prefix="Review of " text-case="title"/>
               </if>
               <else>
-                <text variable="title" form="short" quotes="true"/>
+                <text variable="title" form="short" quotes="true" text-case="title"/>
               </else>
             </choose>
           </else-if>
           <else>
-            <text variable="title" form="short"/>
+            <text variable="title" form="short" text-case="title"/>
           </else>
         </choose>
       </substitute>
@@ -513,8 +513,11 @@
         <text variable="container-title" font-style="italic" text-case="title"/>
       </if>
       <else-if type="bill legal_case legislation" match="none">
-        <text variable="container-title" font-style="italic"/>
+        <text variable="container-title" font-style="italic" text-case="title"/>
       </else-if>
+      <else>
+        <text variable="container-title" text-case="title"/>
+      </else>
     </choose>
   </macro>
   <macro name="legal-cites">
@@ -637,8 +640,7 @@
             <group delimiter=". ">
               <text macro="author"/>
               <text macro="issued"/>
-              <!-- Untuk membuat capital each word pada judul buku -->
-              <text variable="title" font-style="italic" text-case="title"/>
+              <text macro="title"/>
               <group delimiter=": ">
                 <text variable="publisher-place"/>
                 <text variable="publisher"/>
@@ -691,8 +693,7 @@
             <group delimiter=". ">
               <text macro="author"/>
               <text macro="issued"/>
-              <!-- Judul website italic pada bibliography -->
-              <text variable="title" font-style="italic"/>
+              <text macro="title"/>
               <text macro="container"/>
             </group>
           </group>
