@@ -617,20 +617,7 @@
             <text macro="locators"/>
           </group>
         </if>
-        <!-- ===================== -->
-        <!--  GENERIC (tanpa DOI/URL) -->
-        <!-- ===================== -->
-        <else-if type="generic">
-          <group suffix=".">
-            <group delimiter=". ">
-              <text macro="author"/>
-              <text macro="issued"/>
-              <text macro="title-plus-extra"/>
-              <text macro="container"/>
-            </group>
-            <text macro="locators"/>
-          </group>
-        </else-if>
+  <!-- Blok GENERIC dihapus karena type="generic" tidak valid di CSL. -->
         <!-- ===================== -->
         <!--  BUKU (Book)         -->
         <!-- Format: Nama, Tahun. Judul Buku (italic, Title Case). Kota: Penerbit. -->
