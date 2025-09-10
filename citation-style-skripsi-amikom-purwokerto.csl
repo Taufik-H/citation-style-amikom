@@ -629,6 +629,24 @@
           </group>
         </else-if>
         <!-- ===================== -->
+        <!--  BUKU (Book)         -->
+        <!-- Format: Nama, Tahun. Judul Buku (italic, Title Case). Kota: Penerbit. -->
+        <!-- Judul otomatis Title Case dengan text-case="title" -->
+        <else-if type="book">
+          <group suffix=".">
+            <group delimiter=". ">
+              <text macro="author"/>
+              <text macro="issued"/>
+              <!-- Untuk membuat capital each word pada judul buku -->
+              <text variable="title" font-style="italic" text-case="title"/>
+              <group delimiter=": ">
+                <text variable="publisher-place"/>
+                <text variable="publisher"/>
+              </group>
+            </group>
+          </group>
+        </else-if>
+        <!-- ===================== -->
         <!--  PROSIDING / CONFERENCE PAPER  -->
         <!-- ===================== -->
         <else-if type="paper-conference">
