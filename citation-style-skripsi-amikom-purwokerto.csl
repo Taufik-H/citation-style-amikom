@@ -182,6 +182,9 @@
           </else>
         </choose>
       </if>
+      <else-if type="webpage post-weblog" match="any">
+        <text variable="title" font-style="italic" text-case="title"/>
+      </else-if>
       <else-if variable="reviewed-author">
         <choose>
           <if variable="reviewed-title">

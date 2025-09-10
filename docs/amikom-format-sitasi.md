@@ -14,7 +14,7 @@ Berikut detail aturan format sitasi dan daftar pustaka sesuai pedoman skripsi Un
 
 ### Jurnal
 
-> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. "Judul Penelitian." _Nama Jurnal_, 12(2): 123-134.
+> A. S. Putra, B. R. Dewi, dan C. T. Sari. 2020. Judul Penelitian. _Nama Jurnal_, 12(2): 123-134.
 
 ### Buku
 
