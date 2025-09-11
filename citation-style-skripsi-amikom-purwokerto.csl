@@ -141,7 +141,7 @@
       <else>
         <choose>
           <if type="post post-weblog webpage" match="any">
-            <group delimiter=", ">
+            <group delimiter=", " suffix=".">
               <group delimiter=" ">
                 <text value="Diambil dari link"/>
                 <text variable="URL"/>
